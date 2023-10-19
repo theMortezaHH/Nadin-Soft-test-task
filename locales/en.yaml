@@ -1,1 +1,9 @@
-title: Nadin Soft test task
+direction: ltr
+header:
+    title: Test task
+    subTitle: by Nadin Soft
+sidebar:
+    dashbord: Dashbord
+    todos: Todos
+    weather: Weather
+    profile: Profile

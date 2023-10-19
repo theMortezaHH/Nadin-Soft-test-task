@@ -1,1 +1,9 @@
-title: تسک تستی نادین سافت
+direction: rtl
+header:
+    title: تسک تست
+    subTitle: از نادین سافت
+sidebar:
+    dashbord: داشبورد
+    todos: لیست کار ها
+    weather: آب و هوا
+    profile: پروفایل
