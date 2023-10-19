@@ -12,10 +12,13 @@ document.querySelector("body").style.direction = t("direction")
         <p class="headerTitle">{{ $t("header.title") }}</p>
         <p class="headerSubTitle">{{ $t("header.subTitle") }}</p>
     </div>
+
+    <RouterView />
+
     <SideBar />
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .header {
     display: flex;
     position: relative;

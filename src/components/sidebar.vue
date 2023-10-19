@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from "vue"
-import { useI18n } from "vue-i18n"
+import { useRouter } from "vue-router"
+
+const router = useRouter()
 
 const sidebarVisible = ref(false)
 //shows or hides the sidebar
@@ -14,9 +16,10 @@ function showSidebar() {
 
 const selectedItem = ref(1)
 
-function setSelectedItem(item) {
+function setSelectedItem(item, route) {
     selectedItem.value = item
     sidebarVisible.value = false
+    router.push("/" + route)
 }
 </script>
 
@@ -32,24 +35,24 @@ function setSelectedItem(item) {
     </svg>
     <div class="prevent-click" @click="showSidebar" v-if="sidebarVisible"></div>
     <div class="sidebar" :class="{ 'show-sidebar': sidebarVisible }">
-        <button @click="setSelectedItem(1)" :class="{ selected: selectedItem === 1 }">{{
+        <button @click="setSelectedItem(1, '')" :class="{ selected: selectedItem === 1 }">{{
             $t("sidebar.dashbord")
         }}</button>
-        <button @click="setSelectedItem(2)" :class="{ selected: selectedItem === 2 }">{{
-            $t("sidebar.profile")
-        }}</button>
-        <button @click="setSelectedItem(3)" :class="{ selected: selectedItem === 3 }">{{
+        <button @click="setSelectedItem(2, 'todos')" :class="{ selected: selectedItem === 2 }">{{
             $t("sidebar.todos")
         }}</button>
-        <button @click="setSelectedItem(4)" :class="{ selected: selectedItem === 4 }">{{
+        <button @click="setSelectedItem(3, 'weather')" :class="{ selected: selectedItem === 3 }">{{
             $t("sidebar.weather")
+        }}</button>
+        <button @click="setSelectedItem(4, 'profile')" :class="{ selected: selectedItem === 4 }">{{
+            $t("sidebar.profile")
         }}</button>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .menu-icon {
-    position: fixed;
+    position: absolute;
     width: 23px;
     top: 23px;
     margin: 0 20px;
