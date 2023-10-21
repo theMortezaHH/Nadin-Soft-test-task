@@ -32,7 +32,7 @@ const messages = Object.fromEntries(
 const i18n = createI18n({
     globalInjection: true,
     legacy: false,
-    locale: "en",
+    locale: "fa",
     messages,
 })
 

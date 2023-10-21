@@ -86,13 +86,12 @@ function setSelectedItem(item, route) {
         margin: 0px;
     }
     button {
-        height: 30px;
-        width: 120px;
-        margin: 10px 0;
+        height: 35px;
+        width: 180px;
+        margin: 5px 0;
         background: none;
         border: none;
         border-radius: 5px;
-        padding: 5px 0 0 0;
         transition-duration: 0.2s;
         &:hover {
             background: var(--box);

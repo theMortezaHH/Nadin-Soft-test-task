@@ -8,3 +8,30 @@ sidebar:
     weather: Weather
     profile: Profile
 notFound: Page not found
+messageList:
+    [
+        "Did you know that sleeping is a time machine to breakfast?",
+        "Late-night snacker? Remember, calories consumed after midnight are null and void!",
+        "Why do we park on driveways and drive on parkways? Just some midnight thoughts.",
+        "They say the early bird catches the worm, but the night owl gets the best memes!",
+        "Waking up at this hour should be considered an Olympic sport. Gold medal for you!",
+        "Rise and shine! It's a brand-new day to conquer the world, or at least the snooze button.",
+        "Coffee: because adulting is hard, and mornings are harder.",
+        "Warning: The person you're about to meet in the mirror may appear more tired than they appear.",
+        "Remember, breakfast is the most important meal of the day. But so is a second breakfast.",
+        "Procaffeinating (n): The tendency to not start anything until you've had your first cup of coffee.",
+        "Don't worry, you're not late. The universe just overslept.",
+        "Why did the scarecrow win an award? Because he was outstanding in his field!",
+        "Lunchtime! Time to refuel and pretend you're not counting down the hours until dinner.",
+        "Remember, it's not procrastination if you're waiting for the perfect time to do nothing.",
+        "Why don't scientists trust atoms? Because they make up everything!",
+        "Feeling sleepy? It's siesta o'clock! Channel your inner cat and take a power nap.",
+        "Afternoon slump? Just imagine you're a superhero fighting evil deadlines!",
+        "Congratulations, you've made it through most of the workday. Time to reward yourself with a snack!",
+        "Evening plans: Netflix and snacks. It's all about balance, right?",
+        "Dinner time! Because a well-fed tummy equals a happy heart.",
+        "Fun fact: The best ideas come to you right when you're about to fall asleep. Write them down!",
+        "Don't count sheep, count the minutes until it's socially acceptable to go to bed.",
+        "Remember, nothing good happens after 10 PM. Unless it involves pizza.",
+        "Late-night thoughts: Why is it called 'rush hour' when traffic moves at a snail's pace?",
+    ]

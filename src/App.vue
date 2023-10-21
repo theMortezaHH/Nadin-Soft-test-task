@@ -9,8 +9,8 @@ document.querySelector("body").style.direction = t("direction")
 
 <template>
     <div class="header">
-        <p class="headerTitle">{{ $t("header.title") }}</p>
-        <p class="headerSubTitle">{{ $t("header.subTitle") }}</p>
+        <h1 class="headerTitle">{{ $t("header.title") }}</h1>
+        <h2 class="headerSubTitle">{{ $t("header.subTitle") }}</h2>
     </div>
 
     <RouterView />
@@ -35,7 +35,8 @@ document.querySelector("body").style.direction = t("direction")
     }
     .headerSubTitle {
         font-size: 14px;
-        margin: 0 20px;
+        margin: 0 15px;
+        font-weight: normal;
     }
 }
 </style>

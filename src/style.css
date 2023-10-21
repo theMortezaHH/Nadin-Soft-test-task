@@ -1,24 +1,9 @@
-@font-face {
-    font-family: "vazir";
-    font-style: normal;
-    font-weight: normal;
-    src: url("@/fonts/Vazir-FD.eot");
-    src: url("@/fonts/Vazir-FD.woff") format("woff"), url("@/fonts/Vazir-FD.ttf") format("truetype");
-}
-@font-face {
-    font-family: "vazir";
-    font-style: normal;
-    font-weight: bold;
-    src: url("@/fonts/Vazir-Bold-FD.eot");
-    src: url("@/fonts/Vazir-Bold-FD.woff") format("woff"),
-        url("@/fonts/Vazir-Bold-FD.ttf") format("truetype");
-}
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     position: relative;
-    font-family: "vazir", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
