@@ -13,7 +13,9 @@ document.querySelector("body").style.direction = t("direction")
         <h2 class="headerSubTitle">{{ $t("header.subTitle") }}</h2>
     </div>
 
-    <RouterView />
+    <div>
+        <RouterView />
+    </div>
 
     <SideBar />
 </template>

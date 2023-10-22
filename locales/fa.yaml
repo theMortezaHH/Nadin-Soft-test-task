@@ -35,3 +35,40 @@ messageList:
         "چه خوب است که زمانی را با افکار خود در تنهایی سپری کنید.",
         "زود بخوابید تا روز بعد را با انرژی بیشتر شروع کنید!",
     ]
+noItem: آیتمی وجود ندارد
+addNewTodoItem: افزودن آیتم جدید
+title: عنوان
+details: توضیحات
+attention: توجه
+newTodoListItemErrorDiscription: لطفا عنوان و توضیحات را برای افزودن آیتم جدید وارد کنید
+enterTheCityName: نام شهر را به انگلیسی وارد کنید
+weatherDataFor: اطلاعات آب و هاوای شهر
+temperature: دما
+weather: آب و هوا
+weatherStatus:
+    clearSky: آسمان صاف
+    mainlyClear: آسمان عمدتا صاف
+    partlyCloudy: نسبتا ابری
+    overcast: ابری
+    foggy: مه آلود
+    depositingRimeFog: رسوب مه
+    lightDrizzle: نم نم سبک باران
+    drizzle: نم نم باران
+    heavyDrizzle: نم نم سنگین باران
+    ligthFreezing: یخبندان
+    extremeFreezing: یخبندان شدید
+    lightRain: بارش سبک باران
+    rainy: بارانی
+    heavyRain: بارش شدید باران
+    lightFreezingRain: بارش تگرگ
+    heavyFreezingRain: بارش شدید تگرگ
+    lightSnowFall: بارش سبک برف
+    snowFall: برفی
+    heavySnowFall: بارش شدید برف
+    snowGrains: بارش گلوله های برفی
+    lightRainShowers: رگباری و بارش سبک باران
+    rainShowers: رگباری و باران
+    heavyRainShowers: رگباری و بارش شدید باران
+    lightSnowShower: رگباری و برف
+    heavySnowShower: رگباری و بارش شدید برف
+enterYourUserName: نام کاربری خود را وارد کنید

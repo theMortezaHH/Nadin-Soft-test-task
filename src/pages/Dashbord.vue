@@ -3,6 +3,7 @@ import { ref } from "vue"
 
 const hours = ref(new Date().getHours())
 const minutes = ref(new Date().getMinutes())
+//this interval updates time every second
 setInterval(() => {
     hours.value = new Date().getHours()
     minutes.value = new Date().getMinutes()

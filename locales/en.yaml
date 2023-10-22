@@ -35,3 +35,40 @@ messageList:
         "Remember, nothing good happens after 10 PM. Unless it involves pizza.",
         "Late-night thoughts: Why is it called 'rush hour' when traffic moves at a snail's pace?",
     ]
+noItem: No item
+addNewTodoItem: Add new todo item
+title: Title
+details: Details
+attention: Attention
+newTodoListItemErrorDiscription: Please enter title and details to add new item
+enterTheCityName: Enter the city name
+weatherDataFor: Weather date for
+temperature: Temperature
+weather: Weather
+weatherStatus:
+    clearSky: Clear sky
+    mainlyClear: Mainly clear
+    partlyCloudy: Partly cloudy
+    overcast: Overcast
+    foggy: Foggy
+    depositingRimeFog: Depositing rime fog
+    lightDrizzle: Light drizzle
+    drizzle: Drizzle
+    heavyDrizzle: Heavy drizzle
+    ligthFreezing: Light freezing
+    extremeFreezing: Extreme freezing
+    lightRain: Light rain
+    rainy: Rainy
+    heavyRain: Heavy rain
+    lightFreezingRain: Light freezing rain
+    heavyFreezingRain: Heavy freezing rain
+    lightSnowFall: Light snow fall
+    snowFall: Snow fall
+    heavySnowFall: Heavy snow fall
+    snowGrains: Snow grains
+    lightRainShowers: Light rain showers
+    rainShowers: Rains showers
+    heavyRainShowers: Heavy rains showers
+    lightSnowShower: Light snow shower
+    heavySnowShower: Heavy snow shower
+enterYourUserName: Enter your Username
