@@ -72,3 +72,7 @@ weatherStatus:
     lightSnowShower: Light snow shower
     heavySnowShower: Heavy snow shower
 enterYourUserName: Enter your Username
+changeColortheme: Change colortheme
+changeLanguage: Change language
+light: Light
+dark: Dark

@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router"
 import { createPinia } from "pinia"
 import piniaPersist from "pinia-plugin-persistedstate"
 import { createI18n } from "vue-i18n"
+import useProfileStore from "@/store/profile-store.js"
 import "@/style.css"
 import App from "@/App.vue"
 import Dashbord from "@/pages/Dashbord.vue"
@@ -15,6 +16,8 @@ const pinia = createPinia()
 pinia.use(piniaPersist) //a pinia plugin for saving store in localstorage
 const app = createApp(App)
 app.use(pinia)
+
+const profileStore = useProfileStore()
 
 const routes = [
     { path: "/", component: Dashbord },
@@ -37,7 +40,7 @@ const messages = Object.fromEntries(
 const i18n = createI18n({
     globalInjection: true,
     legacy: false,
-    locale: "en",
+    locale: profileStore.locale,
     messages,
 })
 
