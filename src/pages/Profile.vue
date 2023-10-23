@@ -3,7 +3,9 @@ import useProfileStore from "@/store/profile-store.js"
 
 const profileStore = useProfileStore()
 
-function changeColortheme() {}
+function changeColortheme() {
+    location.reload()
+}
 function changeLocale() {
     location.reload()
 }
@@ -21,11 +23,16 @@ function changeLocale() {
         <a-select
             class="input"
             ref="select"
-            v-model:value="profileStore.colortheme"
+            v-model:value="profileStore.selectedTheme"
             @change="changeColortheme()"
         >
-            <a-select-option value="light">{{ $t("light") }}</a-select-option>
-            <a-select-option value="dark">{{ $t("dark") }}</a-select-option>
+            <a-select-option
+                v-for="(value, key, index) in profileStore.themes"
+                :key="index"
+                :value="key"
+            >
+                {{ $t(key) }}
+            </a-select-option>
         </a-select>
 
         <p class="title">{{ $t("changeLanguage") }}</p>

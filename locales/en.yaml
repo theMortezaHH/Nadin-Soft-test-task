@@ -39,11 +39,12 @@ noItem: No item
 addNewTodoItem: Add new todo item
 title: Title
 details: Details
-attention: Attention
-newTodoListItemErrorDiscription: Please enter title and details to add new item
+cancel: Cancel
+confirm: Confirm
 enterTheCityName: Enter the city name
 weatherDataFor: Weather date for
 temperature: Temperature
+degreeCelsius: °C
 weather: Weather
 weatherStatus:
     clearSky: Clear sky
@@ -72,7 +73,7 @@ weatherStatus:
     lightSnowShower: Light snow shower
     heavySnowShower: Heavy snow shower
 enterYourUserName: Enter your Username
-changeColortheme: Change colortheme
+changeColortheme: Change color theme
 changeLanguage: Change language
 light: Light
 dark: Dark

@@ -9,14 +9,6 @@ const todoStore = useTodoStore()
 
 const { t } = useI18n()
 
-//this function shows error notification
-function openNotification() {
-    notification.open({
-        message: t("attention") + "!",
-        description: t("newTodoListItemErrorDiscription") + ".",
-    })
-}
-
 const modalVisible = ref(false)
 const newTodoTitle = ref("")
 const newTodoDetails = ref("")
@@ -26,14 +18,10 @@ function showModal() {
     newTodoDetails.value = ""
     modalVisible.value = true
 }
-//this function validates inputs and adds new item to todo list
+//this function adds new item to todo list
 function addNewTodoItem() {
-    if (newTodoTitle.value.length && newTodoDetails.value.length) {
-        modalVisible.value = false
-        todoStore.todoList.push({ title: newTodoTitle.value, details: newTodoDetails.value })
-    } else {
-        openNotification()
-    }
+    modalVisible.value = false
+    todoStore.todoList.push({ title: newTodoTitle.value, details: newTodoDetails.value })
 }
 
 //this function removes items from todo list
@@ -63,13 +51,18 @@ function handleClick(item) {
             </a-collapse-panel>
         </a-collapse>
 
-        <a-button @click="showModal" style="margin: 20px 0">{{ $t("addNewTodoItem") }}</a-button>
-        <a-modal
-            v-model:open="modalVisible"
-            :title="$t('addNewTodoItem')"
-            @ok="addNewTodoItem()"
-            disabled
-        >
+        <a-button @click="showModal()" style="margin: 20px 0">{{ $t("addNewTodoItem") }}</a-button>
+        <a-modal v-model:open="modalVisible" :title="$t('addNewTodoItem')">
+            <template #footer>
+                <a-button key="back" @click="handleCancel">{{ $t("cancel") }}</a-button>
+                <a-button
+                    type="primary"
+                    @click="addNewTodoItem()"
+                    :disabled="!newTodoTitle.length || !newTodoDetails.length"
+                >
+                    {{ $t("confirm") }}
+                </a-button>
+            </template>
             <a-input
                 class="new-todo-input"
                 v-model:value="newTodoTitle"

@@ -82,7 +82,7 @@ onMounted(() => {
             :title="`${$t('weatherDataFor')}: ${cityNameInput}`"
             v-if="showWeatherStatus"
         >
-            <p>{{ $t("temperature") }}: {{ temperature }}°C</p>
+            <p> {{ $t("temperature") }}: {{ temperature }} {{ $t("degreeCelsius") }} </p>
             <p>{{ $t("weather") }}: {{ weather }}</p>
         </a-card>
     </div>
@@ -93,9 +93,9 @@ onMounted(() => {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    margin: 40px 0;
     .card {
-        margin: 40px 0 0 0;
+        margin: 20px 0 0 0;
         width: 300px;
     }
 }

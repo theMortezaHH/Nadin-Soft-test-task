@@ -39,11 +39,12 @@ noItem: آیتمی وجود ندارد
 addNewTodoItem: افزودن آیتم جدید
 title: عنوان
 details: توضیحات
-attention: توجه
-newTodoListItemErrorDiscription: لطفا عنوان و توضیحات را برای افزودن آیتم جدید وارد کنید
+cancel: لغو
+confirm: تایید
 enterTheCityName: نام شهر را به انگلیسی وارد کنید
-weatherDataFor: اطلاعات آب و هاوای شهر
+weatherDataFor: اطلاعات آب و هوای شهر
 temperature: دما
+degreeCelsius: درجه سانتی گراد
 weather: آب و هوا
 weatherStatus:
     clearSky: آسمان صاف
