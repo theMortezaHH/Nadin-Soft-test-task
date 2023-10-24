@@ -1,17 +1,32 @@
 <script setup>
-import { ref } from "vue"
+import { ref, onUnmounted } from "vue"
 
-const hours = ref(new Date().getHours())
-const minutes = ref(new Date().getMinutes())
+const time = ref(getCurrentTime())
+const hour = ref(new Date().getHours())
+
 //this interval updates time every second
-setInterval(() => {
-    hours.value = new Date().getHours()
-    minutes.value = new Date().getMinutes()
+const timerInterval = setInterval(() => {
+    time.value = getCurrentTime()
+    hour.value = new Date().getHours()
 }, 1000)
+
+function getCurrentTime() {
+    const currentTime = new Date()
+    return `${makeTwoDigit(currentTime.getHours())} : ${makeTwoDigit(currentTime.getMinutes())}`
+}
+
+function makeTwoDigit(str) {
+    return String(str).padStart(2, "0")
+}
+
+//remover interval to clean up memory
+onUnmounted(() => {
+    clearInterval(timerInterval)
+})
 </script>
 <template>
-    <h3 class="time">{{ hours }} : {{ minutes }}</h3>
-    <p class="message">{{ $t(`messageList[${hours}]`) }}</p>
+    <h3 class="time">{{ time }}</h3>
+    <p class="message">{{ $t(`messageList[${hour}]`) }}</p>
 </template>
 <style lang="scss" scoped>
 .time {
