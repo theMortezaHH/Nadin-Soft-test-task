@@ -20,7 +20,7 @@ const profileStore = defineStore(
             },
             dark: {
                 background: "#03001C",
-                box: "#202020",
+                box: "#200e47",
                 border: "#301E67",
                 shadow: " #00000055",
                 button: "#cccccc",

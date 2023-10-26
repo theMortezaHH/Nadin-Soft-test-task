@@ -63,6 +63,7 @@ function setSelectedItem(targetLocation) {
     top: 23px;
     margin: 0 20px;
     stroke: var(--icon);
+    cursor: pointer;
 }
 .prevent-click {
     position: fixed;
