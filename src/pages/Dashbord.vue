@@ -41,5 +41,7 @@ onUnmounted(() => {
 .message {
     font-size: 20px;
     text-align: center;
+    width: 80dvw;
+    margin: 0 auto;
 }
 </style>
