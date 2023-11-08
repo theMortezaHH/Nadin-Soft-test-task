@@ -1,50 +1,32 @@
-<script setup>
-import useProfileStore from "@/store/profile-store.js"
+<script setup lang="ts">
+// import useProfileStore from "@/store/profile-store.ts"
 
-const profileStore = useProfileStore()
+// const profileStore = useProfileStore()
 
-function changeColortheme() {
-    location.reload()
-}
-function changeLocale() {
-    location.reload()
-}
+// function changeColortheme() {
+//     location.reload()
+// }
+// function changeLocale() {
+//     location.reload()
+// }
 </script>
 <template>
     <div class="container">
-        <p class="title">{{ $t("enterYourUserName") }}</p>
-        <a-input
-            class="input"
-            v-model:value="profileStore.userName"
-            :placeholder="$t('enterYourUserName')"
-        />
+        <!-- <p class="title">{{ $t("enterYourUserName") }}</p>
+        <a-input class="input" v-model:value="profileStore.userName" :placeholder="$t('enterYourUserName')" />
 
         <p class="title">{{ $t("changeColortheme") }}</p>
-        <a-select
-            class="input"
-            ref="select"
-            v-model:value="profileStore.selectedTheme"
-            @change="changeColortheme()"
-        >
-            <a-select-option
-                v-for="(value, key, index) in profileStore.themes"
-                :key="index"
-                :value="key"
-            >
+        <a-select class="input" ref="select" v-model:value="profileStore.selectedTheme" @change="changeColortheme()">
+            <a-select-option v-for="(value, key, index) in profileStore.themes" :key="index" :value="key">
                 {{ $t(key) }}
             </a-select-option>
         </a-select>
 
         <p class="title">{{ $t("changeLanguage") }}</p>
-        <a-select
-            class="input"
-            ref="select"
-            v-model:value="profileStore.locale"
-            @change="changeLocale()"
-        >
+        <a-select class="input" ref="select" v-model:value="profileStore.locale" @change="changeLocale()">
             <a-select-option value="en">English</a-select-option>
             <a-select-option value="fa">فارسی</a-select-option>
-        </a-select>
+        </a-select> -->
     </div>
 </template>
 <style lang="scss" scoped>

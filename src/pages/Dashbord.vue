@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref, onUnmounted } from "vue"
 
 const time = ref(getCurrentTime())
@@ -10,13 +10,13 @@ const timerInterval = setInterval(() => {
     hour.value = new Date().getHours()
 }, 1000)
 
-function getCurrentTime() {
+function getCurrentTime(): string {
     const currentTime = new Date()
     return `${makeTwoDigit(currentTime.getHours())} : ${makeTwoDigit(currentTime.getMinutes())}`
 }
 
-function makeTwoDigit(str) {
-    return String(str).padStart(2, "0")
+function makeTwoDigit(str: number): string {
+    return str.toString().padStart(2, "0")
 }
 
 //remover interval to clean up memory

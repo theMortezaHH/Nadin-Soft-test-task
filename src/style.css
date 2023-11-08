@@ -11,8 +11,3 @@
     -webkit-text-size-adjust: 100%;
     -webkit-user-select: none;
 }
-
-body {
-    background: var(--background);
-    color: var(--text);
-}

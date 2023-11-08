@@ -1,4 +1,6 @@
-{
+import weatherCodesObject from "@/types/WeatherCodes.ts"
+
+const weatherCodes: weatherCodesObject = {
     "0": "clearSky",
     "1": "mainlyClear",
     "2": "partlyCloudy",
@@ -23,5 +25,7 @@
     "81": "rainShowers",
     "82": "heavyRainShowers",
     "85": "lightSnowShower",
-    "86": "heavySnowShower"
+    "86": "heavySnowShower",
 }
+
+export default weatherCodes

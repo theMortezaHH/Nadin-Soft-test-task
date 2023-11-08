@@ -1,37 +1,37 @@
-<script setup>
-import { ref } from "vue"
-import useTodoStore from "@/store/todo-store"
-import { useI18n } from "vue-i18n"
-import { DeleteOutlined } from "@ant-design/icons-vue"
-import { notification } from "ant-design-vue"
+<script setup lang="ts">
+// import { ref } from "vue"
+// import useTodoStore from "@/store/todo-store"
+// import { useI18n } from "vue-i18n"
+// import { DeleteOutlined } from "@ant-design/icons-vue"
+// import { notification } from "ant-design-vue"
 
-const todoStore = useTodoStore()
+// const todoStore = useTodoStore()
 
-const { t } = useI18n()
+// const { t } = useI18n()
 
-const modalVisible = ref(false)
-const newTodoTitle = ref("")
-const newTodoDetails = ref("")
+// const modalVisible = ref(false)
+// const newTodoTitle = ref("")
+// const newTodoDetails = ref("")
 //this function shows modal and resets values for user
-function showModal() {
-    newTodoTitle.value = ""
-    newTodoDetails.value = ""
-    modalVisible.value = true
-}
+// function showModal() {
+//     newTodoTitle.value = ""
+//     newTodoDetails.value = ""
+//     modalVisible.value = true
+// }
 //this function adds new item to todo list
-function addNewTodoItem() {
-    modalVisible.value = false
-    todoStore.todoList.push({ title: newTodoTitle.value, details: newTodoDetails.value })
-}
+// function addNewTodoItem() {
+//     modalVisible.value = false
+//     todoStore.todoList.push({ title: newTodoTitle.value, details: newTodoDetails.value })
+// }
 
 //this function removes items from todo list
-function handleClick(item) {
-    todoStore.todoList.splice(item, 1)
-}
+// function handleClick(item) {
+//     todoStore.todoList.splice(item, 1)
+// }
 </script>
 <template>
     <div class="list-container">
-        <a-empty v-if="todoStore.todoList.length === 0">
+        <!-- <a-empty v-if="todoStore.todoList.length === 0">
             <template #description>
                 <span>
                     {{ $t("noItem") }}
@@ -73,7 +73,7 @@ function handleClick(item) {
                 v-model:value="newTodoDetails"
                 :placeholder="$t('details')"
             />
-        </a-modal>
+        </a-modal> -->
     </div>
 </template>
 <style lang="scss" scoped>

@@ -3,7 +3,11 @@ import { createRouter, createWebHistory } from "vue-router"
 import { createPinia } from "pinia"
 import piniaPersist from "pinia-plugin-persistedstate"
 import { createI18n } from "vue-i18n"
-import useProfileStore from "@/store/profile-store.js"
+import useProfileStore from "@/store/profile-store.ts"
+import "vuetify/styles"
+import { createVuetify } from "vuetify"
+import * as components from "vuetify/components"
+import * as directives from "vuetify/directives"
 import "@/style.css"
 import App from "@/App.vue"
 import Dashbord from "@/pages/Dashbord.vue"
@@ -33,7 +37,7 @@ const router = createRouter({
 
 //i18n config
 const messages = Object.fromEntries(
-    Object.entries(import.meta.glob("../locales/*.yaml", { eager: true })).map(([key, value]) => {
+    Object.entries(import.meta.glob<{ default: any }>("../locales/*.yaml", { eager: true })).map(([key, value]) => {
         return [key.slice(11, -5), value.default]
     }),
 )
@@ -44,6 +48,12 @@ const i18n = createI18n({
     messages,
 })
 
+const vuetify = createVuetify({
+    components,
+    directives,
+})
+
 app.use(router)
 app.use(i18n)
+app.use(vuetify)
 app.mount("#app")

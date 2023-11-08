@@ -1,8 +1,8 @@
-<script setup>
-import { onMounted, ref } from "vue"
-import { useRouter } from "vue-router"
+<script setup lang="ts">
+import { ref } from "vue"
+// import { useRouter } from "vue-router"
 
-const router = useRouter()
+// const router = useRouter()
 
 const sidebarVisible = ref(false)
 //shows or hides the sidebar
@@ -14,17 +14,17 @@ function showSidebar() {
     }
 }
 
-const selectedItem = ref(window.location.pathname.substring(1))
+// const selectedItem = ref(window.location.pathname.substring(1))
 //routes user to the selected page
-function setSelectedItem(targetLocation) {
-    selectedItem.value = targetLocation
-    sidebarVisible.value = false
-    router.push("/" + targetLocation)
-}
+// function setSelectedItem(targetLocation: string) {
+//     selectedItem.value = targetLocation
+//     sidebarVisible.value = false
+//     router.push("/" + targetLocation)
+// }
 </script>
 
 <template>
-    <svg viewBox="0 0 512 512" class="menu-icon" @click="showSidebar">
+    <svg viewBox="0 0 512 512" class="menu-icon" @click="showSidebar()">
         <path
             fill="none"
             stroke-linecap="round"
@@ -33,26 +33,20 @@ function setSelectedItem(targetLocation) {
             d="M88 152h336M88 256h336M88 360h336"
         />
     </svg>
-    <div class="prevent-click" @click="showSidebar" v-if="sidebarVisible"></div>
+    <div class="prevent-click" @click="showSidebar()" v-if="sidebarVisible"></div>
     <div class="sidebar" :class="{ 'show-sidebar': sidebarVisible }">
-        <a-button @click="setSelectedItem('')" :class="{ selected: selectedItem === '' }">
+        <!-- <a-button @click="setSelectedItem('')" :class="{ selected: selectedItem === '' }">
             {{ $t("sidebar.dashbord") }}
         </a-button>
         <a-button @click="setSelectedItem('todos')" :class="{ selected: selectedItem === 'todos' }">
             {{ $t("sidebar.todos") }}
         </a-button>
-        <a-button
-            @click="setSelectedItem('weather')"
-            :class="{ selected: selectedItem === 'weather' }"
-        >
+        <a-button @click="setSelectedItem('weather')" :class="{ selected: selectedItem === 'weather' }">
             {{ $t("sidebar.weather") }}
         </a-button>
-        <a-button
-            @click="setSelectedItem('profile')"
-            :class="{ selected: selectedItem === 'profile' }"
-        >
+        <a-button @click="setSelectedItem('profile')" :class="{ selected: selectedItem === 'profile' }">
             {{ $t("sidebar.profile") }}
-        </a-button>
+        </a-button> -->
     </div>
 </template>
 
